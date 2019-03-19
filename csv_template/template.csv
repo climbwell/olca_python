@@ -1,0 +1,3 @@
+Folder Name,Process Name,Flow Name,Category Name,Flow Amount,Location,
+Midwest cattle farms,cattle ranching; IL-CC; at farm,Ammonia,low population density,4251.326172,"United States, Illinois",
+# this only needs to be the folder that contains the process,# do not include the location append in the process name,"# name only, no location code",this is the folder that contains the flow,# value to insert for this flow in this process,# location of the process,# do not include these comments in csv files you intend to run in OpenLCA
