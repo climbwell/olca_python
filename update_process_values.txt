@@ -19,7 +19,7 @@ def findId(folder, process, location):
 
     def checkProc(p):
 
-        if p.category().name == folder and p.name == process and p.location.name==location:
+        if p.category.name == folder and p.name == process and p.location.name==location:
 
             id.append(p.id)
 
