@@ -1,4 +1,7 @@
-# this version worked in OpenLCA 1.7.4 but does not work in OpenLCA 1.8.0
+# The `get` and `set` methods were removed from the model API. Instead of `process.getCategory().name` you write now `process.category.name`. 
+# Also, `process.exchanges` instead of `process.getExchanges()`. The core-model package:
+# https://github.com/GreenDelta/olca-modules/tree/master/olca-core/src/main/java/org/openlca/core/model
+# is the place where these classes are defined.
 
 import csv
 
@@ -16,7 +19,7 @@ def findId(folder, process, location):
 
     def checkProc(p):
 
-        if p.getCategory().name == folder and p.name == process and p.location.name==location:
+        if p.category().name == folder and p.name == process and p.location.name==location:
 
             id.append(p.id)
 
@@ -46,7 +49,7 @@ def updateProcess(id,List_flow):
 
     pro = olca.getProcess(id)
 
-    exs = pro.getExchanges()
+    exs = pro.exchanges
 
     for ex in exs:
 
